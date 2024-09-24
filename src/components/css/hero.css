@@ -17,8 +17,9 @@
 
 .walker-container {
     position: absolute;
-    top: 60%;
-    left: -50px;
+    top: 0;
+    left: 0;
+    height: 100dvh;
     width: 50px;
     overflow: hidden;
     animation: moveAcrossScreen 35s linear infinite;
