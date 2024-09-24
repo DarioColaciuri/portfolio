@@ -59,7 +59,7 @@ const Hero = () => {
         />
 
         <div className="walker-container">
-          <img className="walker" src="walker1.png" alt="walker" />
+          <img className="walker" src="walker2.png" alt="walker" />
         </div>
 
         <img className="background" src="front.png" alt="front" />
