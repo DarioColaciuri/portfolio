@@ -5,6 +5,7 @@
   align-items: center;
   height: 100dvh;
   width: 100dvw;
+  overflow: hidden;
 }
 
 .background {
@@ -15,7 +16,16 @@
   width: 100dvw;
 }
 
-.walker-container {
+.walkerprueba {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100dvw;
+  animation: moveAcrossScreen 45s linear infinite;
+}
+
+/* .walker-container {
   position: absolute;
   top: 60dvh;
   left: 0;
@@ -30,7 +40,7 @@
   left: 0;
   width: 800px;
   animation: walkAnimation 1s steps(16) infinite;
-}
+} */
 
 .hidden {
   opacity: 0;
@@ -48,7 +58,7 @@
 
 @keyframes moveAcrossScreen {
   from {
-    transform: translateX(-40px);
+    transform: translateX(-100px);
   }
   to {
     transform: translateX(120vw);

@@ -58,9 +58,11 @@ const Hero = () => {
           alt="luz4"
         />
 
-        <div className="walker-container">
+        <img className="walkerprueba" src="walker.gif" alt="walker" />
+
+        {/* <div className="walker-container">
           <img className="walker" src="walker2.png" alt="walker" />
-        </div>
+        </div> */}
 
         <img className="background" src="front.png" alt="front" />
       </div>
