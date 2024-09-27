@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "../css/hero.css";
-import Navbar from "../ui/Navbar";
 
 const Hero = () => {
   useEffect(() => {
@@ -26,7 +25,6 @@ const Hero = () => {
 
   return (
     <>
-      <Navbar />
       <div id="hero" className="hero">
         <img className="background" src="background.png" alt="background" />
         <img className="background" src="houses.png" alt="houses" />

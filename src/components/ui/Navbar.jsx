@@ -1,19 +1,21 @@
 import React from "react";
 import "../css/navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ isBackdrop }) => {
   return (
-    <nav className="navbar">
-      <h1 className="logo">Dario Colaciuri</h1>
+    <nav className={`navbar ${isBackdrop ? "backdrop" : ""}`}>
+      <h1 className="logo">
+        <a href="#hero">Dario Colaciuri</a>
+      </h1>
       <ul className="nav-links">
         <li>
           <a href="#projects">projects</a>
         </li>
         <li>
-          <a href="#about">stack</a>
+          <a href="#stack">stack</a>
         </li>
         <li>
-          <a href="#contact">contact</a>
+          <a href="#about">about</a>
         </li>
       </ul>
     </nav>
