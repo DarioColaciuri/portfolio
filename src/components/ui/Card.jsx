@@ -1,19 +1,34 @@
 import React from "react";
 import "../css/card.css";
 
-const Card = ({ title, information, preview, code }) => {
+const Card = ({ title, information, preview, code, image }) => {
   return (
     <div className="card">
-      <h1>{title}</h1>
+      {title && <h1>{title}</h1>}
       <div className="content">
-        <p>{information}</p>
+        {image && <img className="image" src={image} alt={title} />}
+        {information && <p>{information}</p>}
         <div className="buttons">
-          <a title="Preview" target="_blank" href={preview}>
-            <i className="bi bi-box-arrow-up-right"></i>
-          </a>
-          <a title="Code" target="_blank" href={code}>
-            <i className="bi bi-github"></i>
-          </a>
+          {preview && (
+            <a
+              title="Preview"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={preview}
+            >
+              <i className="bi bi-box-arrow-up-right"></i>
+            </a>
+          )}
+          {code && (
+            <a
+              title="Code"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={code}
+            >
+              <i className="bi bi-github"></i>
+            </a>
+          )}
         </div>
       </div>
     </div>
