@@ -67,22 +67,19 @@
 
 @media (max-width: 900px) {
   .hero {
-    width: 130vw;
-    overflow-x: hidden;
+    object-fit: cover;
   }
 
   .background {
-    width: 130vw;
-    overflow-x: hidden;
+    object-fit: cover;
   }
 
   .walkerprueba {
-    width: 130vw;
-    overflow-x: hidden;
+    object-fit: cover;
   }
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .hero {
     overflow-x: hidden;
     width: 200vw;
@@ -97,4 +94,4 @@
     width: 200vw;
     overflow-x: hidden;
   }
-}
+} */
