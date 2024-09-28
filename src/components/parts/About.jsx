@@ -49,7 +49,12 @@ const About = () => {
           >
             <i className="bi bi-linkedin"></i>
           </a>
-          <a rel="noopener noreferrer" target="_blank" title="Resume" href="">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Resume"
+            href="dariocolaciuri_resume.pdf"
+          >
             <i className="bi bi-file-earmark-person"></i>
           </a>
         </ul>
