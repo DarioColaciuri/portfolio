@@ -4,7 +4,7 @@ import "../css/navbar.css";
 const Navbar = ({ isBackdrop }) => {
   return (
     <nav className={`navbar ${isBackdrop ? "backdrop" : ""}`}>
-      <h1 className="logo">
+      <h1 className="home">
         <a href="#hero">Dario Colaciuri</a>
       </h1>
       <ul className="nav-links">

@@ -13,16 +13,19 @@
   backdrop-filter: blur(10px);
 }
 
-.logo {
-  padding-left: 5rem;
+.home {
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
   width: 30dvw;
+  white-space: nowrap;
 }
 
 .nav-links {
   display: flex;
-  margin: 0;
-  padding: 0;
-  justify-content: space-around;
+  margin-left: 4rem;
+  justify-content: center;
+  gap: 10rem;
   align-items: center;
   width: 100dvw;
   list-style: none;
@@ -31,4 +34,16 @@
 a {
   text-decoration: none;
   color: white;
+}
+
+@media (max-width: 900px) {
+  .home {
+    display: none;
+  }
+
+  .nav-links {
+    margin-left: -3rem;
+    justify-content: space-around;
+    gap: 1rem;
+  }
 }

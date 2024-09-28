@@ -37,3 +37,13 @@
 .buttons a {
   font-size: 1.6rem;
 }
+
+@media (max-width: 900px) {
+  .card {
+    width: 60vw;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+}

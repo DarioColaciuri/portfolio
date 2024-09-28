@@ -4,7 +4,7 @@ import "../css/card.css";
 const Card = ({ title, information, preview, code, image }) => {
   return (
     <div className="card">
-      {title && <h1>{title}</h1>}
+      {title && <h1 className="title">{title}</h1>}
       <div className="content">
         {image && <img className="image" src={image} alt={title} />}
         {information && <p>{information}</p>}

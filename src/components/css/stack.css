@@ -1,13 +1,30 @@
 .stack {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   justify-content: center;
-  height: 100dvh;
-  width: 100dvw;
-  background-color: #242424;
+  width: 80vw;
   flex-wrap: wrap;
-  color: white;
-  font-family: "Major Mono Display", monospace;
-  margin-top: 2rem;
+
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  color: #ffffff;
+  margin-top: 10rem;
+  padding: 5rem;
+}
+
+.logo {
+  width: 70px;
+  transition: all 0.5s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+  .stack {
+    margin-left: -3rem;
+  }
 }

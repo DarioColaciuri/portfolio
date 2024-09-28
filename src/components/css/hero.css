@@ -47,14 +47,14 @@
   transition: opacity 0.7s ease;
 }
 
-@keyframes walkAnimation {
+/* @keyframes walkAnimation {
   from {
     transform: translateX(0);
   }
   to {
     transform: translateX(-800px);
   }
-}
+} */
 
 @keyframes moveAcrossScreen {
   from {
@@ -62,5 +62,33 @@
   }
   to {
     transform: translateX(120vw);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    width: 130vw;
+  }
+
+  .background {
+    width: 130vw;
+  }
+
+  .walkerprueba {
+    width: 130vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    width: 200vw;
+  }
+
+  .background {
+    width: 200vw;
+  }
+
+  .walkerprueba {
+    width: 200vw;
   }
 }

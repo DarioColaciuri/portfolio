@@ -1,6 +1,6 @@
 .projects {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
   align-items: center;
   justify-content: center;
   width: 100dvw;

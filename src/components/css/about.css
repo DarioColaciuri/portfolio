@@ -3,11 +3,48 @@
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  height: 100dvh;
   width: 100dvw;
   background-color: #242424;
   flex-wrap: wrap;
   color: white;
   font-family: "Major Mono Display", monospace;
   margin-top: 2rem;
+}
+
+.photo {
+  width: 30rem;
+  border-radius: 50rem;
+  transition: all 0.5s;
+}
+
+.text {
+  width: 30rem;
+  font-family: "Inria Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 900px) {
+  .photo {
+    width: 20rem;
+  }
+
+  .text {
+    width: 20rem;
+  }
+
+  .links {
+    margin-left: -3rem;
+  }
 }
