@@ -4,7 +4,7 @@
   z-index: 99;
   top: 0;
   align-items: center;
-  width: 100dvw;
+  width: 100vw;
   font-family: "Major Mono Display", monospace;
   transition: backdrop-filter 1s ease-in-out;
 }
@@ -17,17 +17,17 @@
   display: flex;
   align-items: center;
   margin-left: 3rem;
-  width: 30dvw;
+  width: 30vw;
   white-space: nowrap;
 }
 
 .nav-links {
   display: flex;
-  margin-left: 4rem;
+  padding-left: 4rem;
   justify-content: center;
   gap: 10rem;
   align-items: center;
-  width: 100dvw;
+  width: 100vw;
   list-style: none;
 }
 
