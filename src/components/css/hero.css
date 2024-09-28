@@ -68,14 +68,17 @@
 @media (max-width: 900px) {
   .hero {
     width: 130vw;
+    overflow-x: hidden;
   }
 
   .background {
     width: 130vw;
+    overflow-x: hidden;
   }
 
   .walkerprueba {
     width: 130vw;
+    overflow-x: hidden;
   }
 }
 
@@ -87,9 +90,11 @@
 
   .background {
     width: 200vw;
+    overflow-x: hidden;
   }
 
   .walkerprueba {
     width: 200vw;
+    overflow-x: hidden;
   }
 }
