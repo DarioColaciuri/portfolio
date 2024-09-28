@@ -57,6 +57,7 @@ const Hero = () => {
         />
 
         <img className="walkerprueba" src="walker.gif" alt="walker" />
+        <img className="car" src="car.gif" alt="car" />
 
         {/* <div className="walker-container">
           <img className="walker" src="walker2.png" alt="walker" />
