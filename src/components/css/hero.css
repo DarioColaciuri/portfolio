@@ -14,15 +14,68 @@
   left: 0;
   height: 100dvh;
   width: 100vw;
+  pointer-events: none;
 }
 
-.walkerprueba {
+.walker {
   position: absolute;
   top: 0;
   left: 0;
   height: 100dvh;
   width: 100vw;
   animation: moveAcrossScreen 45s linear infinite;
+  pointer-events: none;
+}
+
+.zombie {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100vw;
+  animation: moveAcrossScreenZombie 85s linear infinite;
+  pointer-events: none;
+}
+
+.zombieStop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100vw;
+  animation: moveAcrossScreenZombie 85s linear infinite;
+  pointer-events: none;
+}
+
+.puntito {
+  position: absolute;
+  top: 61vh;
+  left: 0;
+  width: 3vw;
+  height: 10vh;
+  animation: moveAcrossScreenZombie 85s linear infinite;
+  cursor: pointer;
+}
+
+.unClickable {
+  pointer-events: none;
+}
+
+.hand {
+  position: absolute;
+  height: 100dvh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.smash {
+  animation: smash 1s linear;
+}
+
+.unSmash {
+  animation: unSmash 2s linear;
 }
 
 .car {
@@ -31,39 +84,38 @@
   left: 0;
   height: 100dvh;
   width: 100vw;
-  animation: moveAcrossScreenCar 15s linear infinite;
+  animation: moveAcrossScreenCar 20s linear infinite;
+  pointer-events: none;
 }
 
-/* .walker-container {
+.moto {
   position: absolute;
-  top: 60dvh;
-  left: 0;
-  height: 100dvh;
-  width: 50px;
-  overflow: hidden;
-  animation: moveAcrossScreen 35s linear infinite;
-}
-
-.walker {
   top: 0;
   left: 0;
-  width: 800px;
-  animation: walkAnimation 1s steps(16) infinite;
-} */
+  height: 100dvh;
+  width: 100vw;
+  animation: moveAcrossScreenMoto 15s linear infinite;
+  pointer-events: none;
+}
 
-.hidden {
+.runner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100vw;
+  animation: moveAcrossScreenRunner 35s linear infinite;
+  pointer-events: none;
+}
+
+.hiddenLight {
   opacity: 0;
   transition: opacity 0.7s ease;
 }
 
-/* @keyframes walkAnimation {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-800px);
-  }
-} */
+.hidden {
+  opacity: 0;
+}
 
 @keyframes moveAcrossScreen {
   from {
@@ -74,12 +126,57 @@
   }
 }
 
+@keyframes moveAcrossScreenZombie {
+  from {
+    transform: translateX(-50vw);
+  }
+  to {
+    transform: translateX(120vw);
+  }
+}
+
+@keyframes smash {
+  from {
+    transform: translateY(-50vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes unSmash {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes moveAcrossScreenRunner {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(200vw);
+  }
+}
+
 @keyframes moveAcrossScreenCar {
   from {
-    transform: translateX(-100px);
+    transform: translateX(-100vw);
   }
   to {
     transform: translateX(300vw);
+  }
+}
+
+@keyframes moveAcrossScreenMoto {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-200vw);
   }
 }
 
@@ -89,10 +186,6 @@
   }
 
   .background {
-    object-fit: cover;
-  }
-
-  .walkerprueba {
     object-fit: cover;
   }
 }

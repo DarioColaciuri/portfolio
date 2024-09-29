@@ -11,9 +11,9 @@ const Hero = () => {
         const randomOffTime = Math.floor(Math.random() * 5000) + 1000;
         const randomOnTime = Math.floor(Math.random() * 3000) + 4000;
         setTimeout(() => {
-          element.classList.remove("hidden");
+          element.classList.remove("hiddenLight");
           setTimeout(() => {
-            element.classList.add("hidden");
+            element.classList.add("hiddenLight");
             toggleLight();
           }, randomOnTime);
         }, randomOffTime);
@@ -22,6 +22,41 @@ const Hero = () => {
       setTimeout(toggleLight, initialDelay);
     });
   }, []);
+
+  const handleClick = (event) => {
+    const zombie = document.querySelector(".zombie");
+    const zombieStop = document.querySelector(".zombieStop");
+    const hand = document.querySelector(".hand");
+    const puntito = document.querySelector(".puntito");
+
+    const x = (event.clientX / window.innerWidth) * 100;
+    const y = 70;
+
+    zombie.style.animationPlayState = "paused";
+    zombieStop.style.animationPlayState = "paused";
+    puntito.style.animationPlayState = "paused";
+
+    hand.style.left = `${x - 8}vw`;
+    hand.style.top = `${y - 70}vh`;
+
+    hand.classList.remove("hidden");
+    hand.classList.add("smash");
+    zombieStop.classList.remove("hidden");
+    zombie.classList.add("hidden");
+    puntito.classList.add("unClickable");
+
+    setTimeout(() => {
+      zombieStop.classList.add("hiddenLight");
+    }, 1000);
+
+    setTimeout(() => {
+      hand.classList.remove("smash");
+      hand.classList.add("unSmash");
+      setTimeout(() => {
+        hand.classList.add("hidden");
+      }, 1300);
+    }, 5000);
+  };
 
   return (
     <>
@@ -56,13 +91,14 @@ const Hero = () => {
           alt="luz4"
         />
 
-        <img className="walkerprueba" src="walker.gif" alt="walker" />
+        <img className="walker" src="walker.gif" alt="walker" />
+        <img className="runner" src="runner.gif" alt="runner" />
+        <img className="zombie" src="zombie.gif" alt="walker" />
+        <img className="zombieStop hidden" src="zombie1.png" alt="walker" />
+        <div className="puntito" onClick={handleClick}></div>
+        <img className="hand hidden" src="hand.png" alt="hand" />
+        <img className="moto" src="moto.gif" alt="moto" />
         <img className="car" src="car.gif" alt="car" />
-
-        {/* <div className="walker-container">
-          <img className="walker" src="walker2.png" alt="walker" />
-        </div> */}
-
         <img className="background" src="front.png" alt="front" />
       </div>
     </>
