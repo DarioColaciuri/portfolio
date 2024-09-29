@@ -92,7 +92,7 @@ const Hero = () => {
         />
 
         <img className="walker" src="walker.gif" alt="walker" />
-        <img className="runner" src="runner.gif" alt="runner" />
+        <img className="runner" src="runner1.gif" alt="runner" />
         <img className="zombie" src="zombie.gif" alt="walker" />
         <img className="zombieStop hidden" src="zombie1.png" alt="walker" />
         <div className="puntito" onClick={handleClick}></div>
